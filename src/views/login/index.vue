@@ -19,7 +19,7 @@
         <el-input
           ref="username"
           v-model="loginForm.username"
-          placeholder="用户名"
+          placeholder="请输入用户名"
           name="username"
           type="text"
           tabindex="1"
@@ -36,7 +36,7 @@
           ref="password"
           v-model="loginForm.password"
           :type="passwordType"
-          placeholder="密码"
+          placeholder="请输入密码"
           name="password"
           tabindex="2"
           auto-complete="on"
@@ -54,12 +54,10 @@
         type="primary"
         style="width: 100%; margin-bottom: 30px"
         @click.native.prevent="handleLogin"
-        >
-        <span v-if="!loading">登 录</span>
-          <span v-else>登 录 中...</span>
-
-        </el-button
       >
+        <span v-if="!loading">登 录</span>
+        <span v-else>登 录 中...</span>
+      </el-button>
 
       <!-- <div class="tips">
         <span style="margin-right:20px;">username: admin</span>
@@ -93,7 +91,6 @@ export default {
       loginForm: {
         username: "admin",
         password: "123456",
-       
       },
       loginRules: {
         username: [
@@ -166,11 +163,6 @@ $cursor: #fff;
 
 /* reset element-ui css */
 .login-container {
-  background-image: url("~@/assets/bg.jpg");
-  // background-size: 100%;
-  background-size: cover;
-  display: flex;
-  align-items: center;
   .el-input {
     display: inline-block;
     height: 47px;
@@ -212,6 +204,11 @@ $light_gray: #eee;
   width: 100%;
   background-color: $bg;
   overflow: hidden;
+  background-image: url("~@/assets/bg.jpg");
+  // background-size: 100%;
+  background-size: cover;
+  display: flex;
+  align-items: center;
 
   .login-form {
     position: relative;

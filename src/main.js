@@ -4,8 +4,8 @@ import 'normalize.css/normalize.css' // A modern alternative to CSS resets
 
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
-// import locale from 'element-ui/lib/locale/lang/en' // lang i18n
-import locale from 'element-ui/lib/locale/lang/zh-CN' // lang i18n
+// import locale from 'element-ui/lib/locale/lang/en' // lang i18n element-ui 英文
+import locale from 'element-ui/lib/locale/lang/zh-CN' // lang i18n element-ui 中文
 
 import '@/styles/index.scss' // global css
 
@@ -33,6 +33,11 @@ if (process.env.NODE_ENV === 'production') {
 Vue.use(ElementUI, { locale })
 // 如果想要中文版 element-ui，按如下方式声明
 // Vue.use(ElementUI)
+
+// ant-design-vue
+import Antd from 'ant-design-vue';
+import 'ant-design-vue/dist/antd.css';
+Vue.use(Antd);
 
 Vue.config.productionTip = false
 
