@@ -89,7 +89,7 @@
               </div>
               <div>
 
-                <a-table :columns="columns" :data-source="data" :pagination="false" :scroll="{ y: 210 }">
+                <a-table style="border:1px solid #E8E8E8" :columns="columns" :data-source="data" :pagination="false" :scroll="{ y: 210 }">
                   <div style="text-align: center" slot="needsVerification" slot-scope="text">
                     <span :style="{ color: text ? 'rgb(255, 0, 0)' : '' }">
                       {{ text ? '是' : '否' }}
